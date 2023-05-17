@@ -1,0 +1,67 @@
+PODS:
+  - EachNavigationBar (1.17.0)
+  - gh_base (0.0.1):
+    - EachNavigationBar
+    - JDStatusBarNotification
+    - SnapKit
+    - SVProgressHUD
+    - SwifterSwift
+    - Then
+  - JDStatusBarNotification (2.0.7)
+  - SnapKit (5.6.0)
+  - SVProgressHUD (2.2.5)
+  - SwifterSwift (5.2.0):
+    - SwifterSwift/AppKit (= 5.2.0)
+    - SwifterSwift/CoreAnimation (= 5.2.0)
+    - SwifterSwift/CoreGraphics (= 5.2.0)
+    - SwifterSwift/CoreLocation (= 5.2.0)
+    - SwifterSwift/Dispatch (= 5.2.0)
+    - SwifterSwift/Foundation (= 5.2.0)
+    - SwifterSwift/MapKit (= 5.2.0)
+    - SwifterSwift/SceneKit (= 5.2.0)
+    - SwifterSwift/SpriteKit (= 5.2.0)
+    - SwifterSwift/StoreKit (= 5.2.0)
+    - SwifterSwift/SwiftStdlib (= 5.2.0)
+    - SwifterSwift/UIKit (= 5.2.0)
+  - SwifterSwift/AppKit (5.2.0)
+  - SwifterSwift/CoreAnimation (5.2.0)
+  - SwifterSwift/CoreGraphics (5.2.0)
+  - SwifterSwift/CoreLocation (5.2.0)
+  - SwifterSwift/Dispatch (5.2.0)
+  - SwifterSwift/Foundation (5.2.0)
+  - SwifterSwift/MapKit (5.2.0)
+  - SwifterSwift/SceneKit (5.2.0)
+  - SwifterSwift/SpriteKit (5.2.0)
+  - SwifterSwift/StoreKit (5.2.0)
+  - SwifterSwift/SwiftStdlib (5.2.0)
+  - SwifterSwift/UIKit (5.2.0)
+  - Then (3.0.0)
+
+DEPENDENCIES:
+  - gh_base (from `../gh_base.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - EachNavigationBar
+    - JDStatusBarNotification
+    - SnapKit
+    - SVProgressHUD
+    - SwifterSwift
+    - Then
+
+EXTERNAL SOURCES:
+  gh_base:
+    :path: "../gh_base.podspec"
+
+SPEC CHECKSUMS:
+  EachNavigationBar: 87430187ca1f898e6d9d8bb95c35e49749e5a0a2
+  gh_base: a7042d021910a067a4a4584604c51208b9c88d38
+  JDStatusBarNotification: 92e7ebdc628db36e1e8e96f0f77c8ce6d1627ec3
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+
+PODFILE CHECKSUM: d47d14ded8b7f3ac9792cfbf8b61bcab46f61bfb
+
+COCOAPODS: 1.12.1
