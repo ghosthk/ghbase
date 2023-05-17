@@ -8,19 +8,19 @@
 import Foundation
 
 extension Bundle {
-    static var appBundleId: String {
+    static public var appBundleId: String {
         return Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String ?? "Unknow"
     }
     
-    static var appName: String {
+    static public var appName: String {
         return Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "Unknow"
     }
     
-    static var appVersion: String {
+    static public var appVersion: String {
         return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknow"
     }
     
-    static var appBuildVersion: String {
+    static public var appBuildVersion: String {
         return Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknow"
     }
     

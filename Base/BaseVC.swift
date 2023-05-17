@@ -9,19 +9,19 @@ import UIKit
 import SwifterSwift
 import EachNavigationBar
 
-class BaseVC: UIViewController {
+open class BaseVC: UIViewController {
 
-    public class func instantiateNCByStoryboard() -> BaseNC {
+    open class func instantiateNCByStoryboard() -> BaseNC {
         assert(false, "Subclass need overwrite")
         return BaseNC()
     }
     
-    public class func instantiateByStoryboard() -> Self {
+    open class func instantiateByStoryboard() -> Self {
         assert(false, "Subclass need overwrite")
         return BaseVC() as! Self
     }
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         navigation.bar.backgroundColor = .white
         view.backgroundColor = UIColor(hex: 0xF2F5F7)
@@ -31,11 +31,11 @@ class BaseVC: UIViewController {
         }
     }
     
-    override var shouldAutorotate: Bool {
+    open override var shouldAutorotate: Bool {
         return false
     }
     
-    @objc @IBAction public func backBarButonAction(_ button: UIBarButtonItem?) {
+    @objc @IBAction open func backBarButonAction(_ button: UIBarButtonItem?) {
         navigationController?.popViewController(animated: true)
     }
     

@@ -8,14 +8,14 @@
 import Foundation
 
 extension String {
-    func trimmingWhitespaces() -> String {
+    public func trimmingWhitespaces() -> String {
         return self.trimmingCharacters(in: .whitespaces)
     }
 }
 
 extension String {
     /// Inner comparison utility to handle same versions with different length. (Ex: "1.0.0" & "1.0")
-    private func compare(toVersion targetVersion: String) -> ComparisonResult {
+    public func compare(toVersion targetVersion: String) -> ComparisonResult {
         
         let versionDelimiter = "."
         var result: ComparisonResult = .orderedSame
