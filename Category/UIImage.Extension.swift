@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImage {
-    func getThumbnail() -> UIImage? {
+    public func getThumbnail() -> UIImage? {
         guard let imageData = self.pngData() else { return nil }
         let options = [
             kCGImageSourceCreateThumbnailWithTransform: true,
@@ -21,7 +21,7 @@ extension UIImage {
         return UIImage(cgImage: imageReference)
     }
     
-    static func fixedOrientation(for image: UIImage) -> UIImage? {
+    static public func fixedOrientation(for image: UIImage) -> UIImage? {
         guard image.imageOrientation != .up else {
             return image
         }

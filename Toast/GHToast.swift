@@ -9,26 +9,26 @@ import Foundation
 import JDStatusBarNotification
 import SVProgressHUD
 
-enum GHToastStyle {
+public enum GHToastStyle {
 case success
 case warning
 case error
 }
 
-class GHToast {
-    class func show(text: String, duration: TimeInterval? = nil, style: GHToastStyle? = nil) {
+open class GHToast {
+    class public func show(text: String, duration: TimeInterval? = nil, style: GHToastStyle? = nil) {
         NotificationPresenter.shared().present(text: text, dismissAfterDelay: duration ?? 2, includedStyle: [.success: IncludedStatusBarNotificationStyle.success,                               .warning: IncludedStatusBarNotificationStyle.warning,                                  .error: IncludedStatusBarNotificationStyle.error][style] ?? .success)
     }
 }
 
 
-class GHFullHUD {
-    class func show() {
+open class GHFullHUD {
+    class public func show() {
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()
     }
     
-    class func hiden() {
+    class public func hiden() {
         SVProgressHUD.dismiss()
     }
 }

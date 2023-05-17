@@ -10,18 +10,18 @@ import Foundation
 
 extension FileManager {
     
-    static let documentsURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    static public let documentsURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
-    static let libraryURL = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!
+    static public let libraryURL = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!
     
-    static let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+    static public let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
     
-    static let tempURL = URL(fileURLWithPath: NSTemporaryDirectory())
+    static public let tempURL = URL(fileURLWithPath: NSTemporaryDirectory())
     
 }
 
 extension String {
-    func fileExist(isDirectory: UnsafeMutablePointer<ObjCBool>? = nil) -> Bool {
+    public func fileExist(isDirectory: UnsafeMutablePointer<ObjCBool>? = nil) -> Bool {
         if isDirectory != nil {
             return FileManager.default.fileExists(atPath: self, isDirectory: isDirectory)
         }

@@ -7,19 +7,20 @@
 
 import UIKit
 
-class BasePresentationVC: BaseVC {
+
+open class BasePresentationVC: BaseVC {
     
     private var completionBlock:  GPVoidBlock?
     private var dismissBlock: GPAnyBlock?
     private var isFirstLoad = true
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.clear
         self.view.alpha = 0.0
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if isFirstLoad {
             isFirstLoad = false
@@ -27,7 +28,7 @@ class BasePresentationVC: BaseVC {
         }
     }
     
-    public func show(_ on: UIViewController? = nil, completion: GPVoidBlock? = nil, dismiss: GPAnyBlock? = nil) {
+    open func show(_ on: UIViewController? = nil, completion: GPVoidBlock? = nil, dismiss: GPAnyBlock? = nil) {
         modalPresentationStyle = .overCurrentContext
         let onVC : UIViewController
         if on != nil {
@@ -40,7 +41,7 @@ class BasePresentationVC: BaseVC {
         onVC.present(self, animated: false)
     }
     
-    public func dismiss(any: Any? = nil, completion:GPBoolBlock? = nil) {
+    open func dismiss(any: Any? = nil, completion:GPBoolBlock? = nil) {
         hidenAnimation { finished in
             self.dismiss(animated: false) {
                 if completion != nil{
@@ -54,11 +55,11 @@ class BasePresentationVC: BaseVC {
     }
     
     /// 需要子类重写显示动画
-    public func showAnimation(completion: GPBoolBlock? = nil) {
+    open func showAnimation(completion: GPBoolBlock? = nil) {
         assert(false)
     }
     /// 需要子类重写隐藏动画
-    public func hidenAnimation(completion: GPBoolBlock? = nil) {
+    open func hidenAnimation(completion: GPBoolBlock? = nil) {
         assert(false)
     }
 }
@@ -66,7 +67,7 @@ class BasePresentationVC: BaseVC {
 // MARK: - 默认动画供子类调用
 extension BasePresentationVC {
     /// 显示 alert 的动画 contentview:alert框的view
-    public func showAlertAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func showAlertAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
         self.view.alpha = 1
         if contentView != nil {
             contentView!.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -84,7 +85,7 @@ extension BasePresentationVC {
     }
     
     /// 隐藏 alert 的动画 contentview:alert框的view
-    public func hidenAlertAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func hidenAlertAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
         UIView.animate(withDuration: 0.3) {
             self.view.alpha = 0.0
         } completion: { finished in
@@ -95,7 +96,7 @@ extension BasePresentationVC {
     }
 
     /// 显示 底部弹出内容 的动画 contentview:底部弹框的view
-    public func showActionSheetAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func showActionSheetAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
         self.view.alpha = 1
         let contentHeight: CGFloat
         if contentView != nil {
@@ -116,7 +117,7 @@ extension BasePresentationVC {
         }
     }
     /// 隐藏 底部弹出内容 的动画 contentview:底部弹框的view
-    public func hidenActionSheetAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func hidenActionSheetAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
         let contentHeight: CGFloat
         if contentView != nil {
             contentHeight = contentView!.frame.height

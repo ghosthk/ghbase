@@ -8,39 +8,39 @@
 import Foundation
 
 // MARK: - 常用
-typealias GPVoidBlock = () ->()
-typealias GPBoolBlock = (Bool) ->()
-typealias GPFloatBlock = (Float) ->()
-typealias GPIntBlock = (Int) ->()
-typealias GPStringBlock = (String?) ->()
-typealias GPImageBlock = (UIImage?) ->()
-typealias GPDataBlock = (Data?) ->()
-typealias GPErrorBlock = (Error?) ->()
-typealias GPArrayBlock = ([Any]?) ->()
-typealias GPAnyBlock = (Any?) ->()
+public typealias GPVoidBlock = () ->()
+public typealias GPBoolBlock = (Bool) ->()
+public typealias GPFloatBlock = (Float) ->()
+public typealias GPIntBlock = (Int) ->()
+public typealias GPStringBlock = (String?) ->()
+public typealias GPImageBlock = (UIImage?) ->()
+public typealias GPDataBlock = (Data?) ->()
+public typealias GPErrorBlock = (Error?) ->()
+public typealias GPArrayBlock = ([Any]?) ->()
+public typealias GPAnyBlock = (Any?) ->()
 
-let kScreenHeight = UIScreen.main.bounds.height
-let kScreenWidth  = UIScreen.main.bounds.width
+public let kScreenHeight = UIScreen.main.bounds.height
+public let kScreenWidth  = UIScreen.main.bounds.width
 
-let kDefaultDesignWidth = 375.0
-let kDefaultDesignHeight = 741.0
+public let kDefaultDesignWidth = 375.0
+public let kDefaultDesignHeight = 741.0
 
-let kDefaultWidthScale = kScreenWidth / kDefaultDesignWidth
-let kDefaultHeightScale = kScreenHeight / kDefaultDesignHeight
+public let kDefaultWidthScale = kScreenWidth / kDefaultDesignWidth
+public let kDefaultHeightScale = kScreenHeight / kDefaultDesignHeight
 
-let kSafeAreaTopHeight = kScreenHeight >= 812.0 ? 88.0 : 64.0
-let kSafeTopHeight = kScreenHeight >= 812.0 ? 44.0 : 20.0
-let kSafeAreaBottomHeight: CGFloat = kScreenHeight >= 812.0 ? 24.0 : 0.0
+public let kSafeAreaTopHeight = kScreenHeight >= 812.0 ? 88.0 : 64.0
+public let kSafeTopHeight = kScreenHeight >= 812.0 ? 44.0 : 20.0
+public let kSafeAreaBottomHeight: CGFloat = kScreenHeight >= 812.0 ? 24.0 : 0.0
 
-func scaleWidth(_ value: CGFloat, _ designWidth: CGFloat = kDefaultDesignWidth) -> CGFloat {
+public func scaleWidth(_ value: CGFloat, _ designWidth: CGFloat = kDefaultDesignWidth) -> CGFloat {
     return kScreenWidth / designWidth * value
 }
 
-func scaleHeight(_ value: CGFloat, _ designHeight: CGFloat = kDefaultDesignHeight) -> CGFloat {
+public func scaleHeight(_ value: CGFloat, _ designHeight: CGFloat = kDefaultDesignHeight) -> CGFloat {
     return kScreenHeight / designHeight * value
 }
 
-func asyncMainThread(_ block:@escaping () ->()) {
+public func asyncMainThread(_ block:@escaping () ->()) {
     if Thread.isMainThread {
         block()
     } else {
