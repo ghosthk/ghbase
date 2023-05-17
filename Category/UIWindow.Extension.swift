@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIWindow {
-    static func mainWindow() -> UIWindow? {
+    static public func mainWindow() -> UIWindow? {
         if #available(iOS 15.0, *) {
             for scene in UIApplication.shared.connectedScenes {
                 if scene.activationState == .foregroundActive {
@@ -27,7 +27,7 @@ extension UIWindow {
         return nil
     }
     
-    static func currentVC() -> UIViewController? {
+    static public func currentVC() -> UIViewController? {
         guard let mainWindow = mainWindow() else {
             return nil
         }

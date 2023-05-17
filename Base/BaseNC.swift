@@ -8,9 +8,9 @@
 import UIKit
 import EachNavigationBar
 
-class BaseNC: UINavigationController {
+open class BaseNC: UINavigationController {
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -22,26 +22,26 @@ class BaseNC: UINavigationController {
 //        navigation.configuration.alpha = 0.0
     }
     
-    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return self.topViewController?.supportedInterfaceOrientations ?? super.supportedInterfaceOrientations
     }
     
-    public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return self.topViewController?.preferredInterfaceOrientationForPresentation ?? super.preferredInterfaceOrientationForPresentation
     }
     
-    public override var preferredStatusBarStyle: UIStatusBarStyle {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
             return .darkContent
         }
         return .default
     }
     
-    public override var shouldAutorotate: Bool {
+    open override var shouldAutorotate: Bool {
         return self.topViewController?.shouldAutorotate ?? super.shouldAutorotate
     }
     
-    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if let nc = self.parent?.navigationController {
             nc.pushViewController(viewController, animated: animated)
         } else {

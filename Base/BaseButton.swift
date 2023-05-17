@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class BaseButton: UIButton {
+open class BaseButton: UIButton {
 
-    @IBInspectable var toucheScale = 1.0
+    @IBInspectable open var toucheScale = 1.0
     private var _normalBGColor : UIColor?
-    @IBInspectable var normalBGColor : UIColor? {
+    @IBInspectable open var normalBGColor : UIColor? {
         set {
             _normalBGColor = newValue
             self.setBackgroundImage(self.imageWithColor(color: _normalBGColor), for: .normal)
@@ -22,7 +22,7 @@ class BaseButton: UIButton {
         }
     }
     private var _highlightBGColor : UIColor?
-    @IBInspectable var highlightBGColor : UIColor? {
+    @IBInspectable open var highlightBGColor : UIColor? {
         set {
             _highlightBGColor = newValue
             self.setBackgroundImage(self.imageWithColor(color: _highlightBGColor), for: .highlighted)
@@ -32,7 +32,7 @@ class BaseButton: UIButton {
         }
     }
     private var _disableBGColor : UIColor?
-    @IBInspectable var disableBGColor : UIColor? {
+    @IBInspectable open var disableBGColor : UIColor? {
         set {
             _disableBGColor = newValue
             self.setBackgroundImage(self.imageWithColor(color: _disableBGColor), for: .disabled)
@@ -42,7 +42,7 @@ class BaseButton: UIButton {
         }
     }
     private var _selectedBGColor : UIColor?
-    @IBInspectable var selectedBGColor : UIColor? {
+    @IBInspectable open var selectedBGColor : UIColor? {
         set {
             _selectedBGColor = newValue
             self.setBackgroundImage(self.imageWithColor(color: _selectedBGColor), for: .selected)
@@ -57,17 +57,17 @@ class BaseButton: UIButton {
         self.__initViews()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         self.__initViews()
     }
     
-    override class func systemButton(with image: UIImage, target: Any?, action: Selector?) -> Self {
+    open override class func systemButton(with image: UIImage, target: Any?, action: Selector?) -> Self {
         let button = BaseButton.systemButton(with: image, target: target, action: action)
         return button as! Self
     }
         
-    lazy var nibFirstView : UIView? = {
+    open lazy var nibFirstView : UIView? = {
         let path = Bundle.main.path(forResource: Self.className, ofType: "nib")
         if path != nil {
             if FileManager.default.fileExists(atPath: path!) {
@@ -91,14 +91,13 @@ class BaseButton: UIButton {
         initViews()
     }
     
-    func initViews() {
+    open func initViews() {
         
     }
 
     deinit {
         print("\(Self.className) dealloc")
     }
-
 
     private func imageWithColor(color: UIColor?) -> UIImage? {
         if color == nil {
@@ -117,7 +116,7 @@ class BaseButton: UIButton {
 }
 
 extension BaseButton {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if toucheScale != 1.0 {
             UIView.animate(withDuration: 0.1) {
@@ -126,7 +125,7 @@ extension BaseButton {
         }
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         if toucheScale != 1.0 {
             UIView.animate(withDuration: 0.1) {
@@ -135,7 +134,7 @@ extension BaseButton {
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         if toucheScale != 1.0 {
             UIView.animate(withDuration: 0.1) {

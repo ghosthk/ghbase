@@ -7,20 +7,19 @@
 
 import UIKit
 
-@objc
-class BaseView: UIView {
+open class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.__initViews()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         self.__initViews()
     }
     
-    lazy var nibFirstView : UIView? = {
+    open lazy var nibFirstView : UIView? = {
         let path = Bundle.main.path(forResource: Self.className, ofType: "nib")
         if path != nil {
             if FileManager.default.fileExists(atPath: path!) {
@@ -43,7 +42,7 @@ class BaseView: UIView {
         initViews()
     }
     
-    @objc func initViews() {
+    @objc open func initViews() {
         
     }
 

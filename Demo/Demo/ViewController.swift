@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import gh_base
 
-class ViewController: UIViewController {
+class ViewController: BaseNC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let image = UIImage(named: "")
+        image?.getThumbnail()
+        let basebutton = BaseButton()
+        basebutton.normalBGColor
     }
 
 

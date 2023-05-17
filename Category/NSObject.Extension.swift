@@ -10,7 +10,7 @@ import UIKit
 
 extension NSObject {
     
-    class var className : String {
+    class public var className : String {
         get {
             let name = NSStringFromClass(self)
             if (name.contains(".")) {
@@ -21,7 +21,7 @@ extension NSObject {
         }
     }
     
-    class var nib : UINib {
+    class public var nib : UINib {
         get {
             return UINib(nibName: self.className, bundle: nil)
         }
