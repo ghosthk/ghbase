@@ -10,7 +10,7 @@ import UIKit
 
 open class BaseButton: UIButton {
 
-    @IBInspectable open var toucheScale = 1.0
+    @IBInspectable open var toucheScale: CGFloat = 1.0
     private var _normalBGColor : UIColor?
     @IBInspectable open var normalBGColor : UIColor? {
         set {

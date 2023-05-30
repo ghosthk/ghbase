@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name             = 'gh_base'
-    s.version          = '0.0.1'
+    s.version          = '0.0.2'
     s.summary          = '基础库'
 
     s.homepage         = 'https://gitee.com/tapque/gh-base.git'
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
     s.dependency 'SVProgressHUD'
     s.dependency 'JDStatusBarNotification'
-    s.dependency 'SwifterSwift'
+    s.dependency 'SwifterSwift'#, :git=>'https://github.com/SwifterSwift/SwifterSwift.git', :tag => '5.3.0'
     s.dependency 'SnapKit'
     s.dependency 'EachNavigationBar'
     s.dependency 'Then'
