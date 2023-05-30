@@ -29,6 +29,7 @@
 		E61D19D62A14B0F500AFF0E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E61D19D82A14B0F500AFF0E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E61D19DE2A14B26100AFF0E6 /* gh_base.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = gh_base.podspec; path = ../../gh_base.podspec; sourceTree = "<group>"; };
+		E6DCF95F2A259FB200B47ECD /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				E61D19CA2A14B0F400AFF0E6 /* AppDelegate.swift */,
 				E61D19CC2A14B0F400AFF0E6 /* SceneDelegate.swift */,
 				E61D19CE2A14B0F400AFF0E6 /* ViewController.swift */,
+				E6DCF95F2A259FB200B47ECD /* UIViewExtension.swift */,
 				E61D19D02A14B0F400AFF0E6 /* Main.storyboard */,
 				E61D19D32A14B0F500AFF0E6 /* Assets.xcassets */,
 				E61D19D52A14B0F500AFF0E6 /* LaunchScreen.storyboard */,
