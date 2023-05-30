@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
     s.dependency 'SVProgressHUD'
     s.dependency 'JDStatusBarNotification'
-    s.dependency 'SwifterSwift'
+    s.dependency 'SwifterSwift'#, :git=>'https://github.com/SwifterSwift/SwifterSwift.git', :tag => '5.3.0'
     s.dependency 'SnapKit'
     s.dependency 'EachNavigationBar'
     s.dependency 'Then'
