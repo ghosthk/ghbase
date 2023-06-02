@@ -1,6 +1,5 @@
 //
 //  BaseVC.swift
-//  QR5
 //
 //  Created by Ghost on 2023/3/10.
 //
@@ -9,16 +8,16 @@ import UIKit
 import SwifterSwift
 import EachNavigationBar
 
-open class BaseVC: UIViewController {
+open class GHBaseVC: UIViewController {
 
-    open class func instantiateNCByStoryboard() -> BaseNC {
+    open class func instantiateNCByStoryboard() -> GHBaseNC {
         assert(false, "Subclass need overwrite")
-        return BaseNC()
+        return GHBaseNC()
     }
     
     open class func instantiateByStoryboard() -> Self {
         assert(false, "Subclass need overwrite")
-        return BaseVC() as! Self
+        return GHBaseVC() as! Self
     }
     
     open override func viewDidLoad() {

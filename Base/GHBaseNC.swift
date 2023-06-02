@@ -1,6 +1,5 @@
 //
-//  BaseNC.swift
-//  QR5
+//  GHBaseNC.swift
 //
 //  Created by Ghost on 2023/3/10.
 //
@@ -8,7 +7,7 @@
 import UIKit
 import EachNavigationBar
 
-open class BaseNC: UINavigationController {
+open class GHBaseNC: UINavigationController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()

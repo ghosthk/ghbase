@@ -1,13 +1,12 @@
 //
-//  BaseView.swift
-//  QR5
+//  GHBaseView.swift
 //
 //  Created by Ghost on 2023/3/10.
 //
 
 import UIKit
 
-open class BaseView: UIView {
+open class GHBaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
