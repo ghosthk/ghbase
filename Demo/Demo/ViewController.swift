@@ -17,6 +17,9 @@ class ViewController: GHBaseNC {
         image?.getThumbnail()
         let basebutton = GHBaseButton()
         basebutton.normalBGColor
+        
+        let grView = GHGradientView()
+        grView.locations
     }
 
 

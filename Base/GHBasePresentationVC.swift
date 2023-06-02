@@ -65,7 +65,7 @@ open class GHBasePresentationVC: GHBaseVC {
 // MARK: - 默认动画供子类调用
 extension GHBasePresentationVC {
     /// 显示 alert 的动画 contentview:alert框的view
-    open func showAlertAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
+    public func showAlertAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         self.view.alpha = 1
         if contentView != nil {
             contentView!.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -83,7 +83,7 @@ extension GHBasePresentationVC {
     }
     
     /// 隐藏 alert 的动画 contentview:alert框的view
-    open func hidenAlertAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
+    public func hidenAlertAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         UIView.animate(withDuration: 0.3) {
             self.view.alpha = 0.0
         } completion: { finished in
@@ -94,7 +94,7 @@ extension GHBasePresentationVC {
     }
 
     /// 显示 底部弹出内容 的动画 contentview:底部弹框的view
-    open func showActionSheetAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
+    public func showActionSheetAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         self.view.alpha = 1
         let contentHeight: CGFloat
         if contentView != nil {
@@ -115,7 +115,7 @@ extension GHBasePresentationVC {
         }
     }
     /// 隐藏 底部弹出内容 的动画 contentview:底部弹框的view
-    open func hidenActionSheetAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
+    public func hidenActionSheetAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         let contentHeight: CGFloat
         if contentView != nil {
             contentHeight = contentView!.frame.height
