@@ -6,9 +6,9 @@
 
 import UIKit
 
-class GHGradientView: GHBaseView {
+open class GHGradientView: GHBaseView {
     private var _startPoint = CGPoint(x: 0, y: 0)
-    var startPoint : CGPoint {
+    open var startPoint : CGPoint {
         set {
             _startPoint = newValue
             self.gradientLayer.startPoint = newValue
@@ -19,7 +19,7 @@ class GHGradientView: GHBaseView {
     }
 
     private var _endPoint = CGPoint(x: 0.0, y: 0.5)
-    var endPoint : CGPoint {
+    open var endPoint : CGPoint {
         set {
             _endPoint = newValue
             self.gradientLayer.endPoint = newValue
@@ -29,7 +29,7 @@ class GHGradientView: GHBaseView {
         }
     }
     private var _colors : [UIColor] = []
-    var colors : [UIColor] {
+    open var colors : [UIColor] {
         set {
             _colors = newValue
             var newColors : [CGColor] = []
@@ -43,7 +43,7 @@ class GHGradientView: GHBaseView {
         }
     }
     private var _locations : [NSNumber] = [(0.0), (1.0)]
-    var locations : [NSNumber] {
+    open var locations : [NSNumber] {
         set {
             _locations = newValue
             self.gradientLayer.locations = newValue
@@ -53,9 +53,9 @@ class GHGradientView: GHBaseView {
         }
     }
     
-    private(set) var gradientLayer = CAGradientLayer()
+    open private(set) var gradientLayer = CAGradientLayer()
     
-    override func initViews() {
+    open override func initViews() {
         super.initViews()
         layer.insertSublayer(gradientLayer, at: 0)
         gradientLayer.startPoint = startPoint
@@ -63,7 +63,7 @@ class GHGradientView: GHBaseView {
         gradientLayer.locations = locations
     }
     
-    override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = bounds
         gradientLayer.startPoint = startPoint
