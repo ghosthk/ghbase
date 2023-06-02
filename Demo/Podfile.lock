@@ -1,6 +1,6 @@
 PODS:
   - EachNavigationBar (1.17.0)
-  - gh_base (0.0.2):
+  - gh_base (0.0.4):
     - EachNavigationBar
     - JDStatusBarNotification
     - SnapKit
@@ -55,7 +55,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EachNavigationBar: 87430187ca1f898e6d9d8bb95c35e49749e5a0a2
-  gh_base: fec8cc4c60492a7db1bc559286e096fe23dd5421
+  gh_base: a8a5afd634dcd9b99a7ef621de225bd5ee39ddce
   JDStatusBarNotification: 92e7ebdc628db36e1e8e96f0f77c8ce6d1627ec3
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6

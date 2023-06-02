@@ -1,6 +1,6 @@
 //
 //  UIWindow.Extension.swift
-//  QR5
+
 //
 //  Created by Ghost on 2023/2/27.
 //

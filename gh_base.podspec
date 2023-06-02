@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name             = 'gh_base'
-    s.version          = '0.0.3'
+    s.version          = '0.0.4'
     s.summary          = '基础库'
 
     s.homepage         = 'https://gitee.com/tapque/gh-base.git'
