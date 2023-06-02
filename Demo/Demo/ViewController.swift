@@ -8,14 +8,14 @@
 import UIKit
 import gh_base
 
-class ViewController: BaseNC {
+class ViewController: GHBaseNC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let image = UIImage(named: "")
         image?.getThumbnail()
-        let basebutton = BaseButton()
+        let basebutton = GHBaseButton()
         basebutton.normalBGColor
     }
 

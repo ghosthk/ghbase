@@ -1,6 +1,5 @@
 //
-//  BaseButton.swift
-//  QR5
+//  GHBaseButton.swift
 //
 //  Created by Ghost on 2023/3/13.
 //
@@ -8,7 +7,7 @@
 import Foundation
 import UIKit
 
-open class BaseButton: UIButton {
+open class GHBaseButton: UIButton {
 
     @IBInspectable open var toucheScale: CGFloat = 1.0
     private var _normalBGColor : UIColor?
@@ -63,7 +62,7 @@ open class BaseButton: UIButton {
     }
     
     open override class func systemButton(with image: UIImage, target: Any?, action: Selector?) -> Self {
-        let button = BaseButton.systemButton(with: image, target: target, action: action)
+        let button = GHBaseButton.systemButton(with: image, target: target, action: action)
         return button as! Self
     }
         
@@ -115,7 +114,7 @@ open class BaseButton: UIButton {
     }
 }
 
-extension BaseButton {
+extension GHBaseButton {
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if toucheScale != 1.0 {

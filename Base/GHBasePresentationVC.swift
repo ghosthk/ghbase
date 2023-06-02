@@ -1,17 +1,15 @@
 //
-//  BasePresentationVC.swift
-//  QR5
+//  GHBasePresentationVC.swift
 //
 //  Created by Ghost on 2023/3/14.
 //
 
 import UIKit
 
-
-open class BasePresentationVC: BaseVC {
+open class GHBasePresentationVC: GHBaseVC {
     
-    private var completionBlock:  GPVoidBlock?
-    private var dismissBlock: GPAnyBlock?
+    private var completionBlock:  GHVoidBlock?
+    private var dismissBlock: GHAnyBlock?
     private var isFirstLoad = true
     
     open override func viewDidLoad() {
@@ -28,7 +26,7 @@ open class BasePresentationVC: BaseVC {
         }
     }
     
-    open func show(_ on: UIViewController? = nil, completion: GPVoidBlock? = nil, dismiss: GPAnyBlock? = nil) {
+    open func show(_ on: UIViewController? = nil, completion: GHVoidBlock? = nil, dismiss: GHAnyBlock? = nil) {
         modalPresentationStyle = .overCurrentContext
         let onVC : UIViewController
         if on != nil {
@@ -41,7 +39,7 @@ open class BasePresentationVC: BaseVC {
         onVC.present(self, animated: false)
     }
     
-    open func dismiss(any: Any? = nil, completion:GPBoolBlock? = nil) {
+    open func dismiss(any: Any? = nil, completion:GHBoolBlock? = nil) {
         hidenAnimation { finished in
             self.dismiss(animated: false) {
                 if completion != nil{
@@ -55,19 +53,19 @@ open class BasePresentationVC: BaseVC {
     }
     
     /// 需要子类重写显示动画
-    open func showAnimation(completion: GPBoolBlock? = nil) {
+    open func showAnimation(completion: GHBoolBlock? = nil) {
         assert(false)
     }
     /// 需要子类重写隐藏动画
-    open func hidenAnimation(completion: GPBoolBlock? = nil) {
+    open func hidenAnimation(completion: GHBoolBlock? = nil) {
         assert(false)
     }
 }
 
 // MARK: - 默认动画供子类调用
-extension BasePresentationVC {
+extension GHBasePresentationVC {
     /// 显示 alert 的动画 contentview:alert框的view
-    open func showAlertAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func showAlertAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         self.view.alpha = 1
         if contentView != nil {
             contentView!.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -85,7 +83,7 @@ extension BasePresentationVC {
     }
     
     /// 隐藏 alert 的动画 contentview:alert框的view
-    open func hidenAlertAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func hidenAlertAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         UIView.animate(withDuration: 0.3) {
             self.view.alpha = 0.0
         } completion: { finished in
@@ -96,7 +94,7 @@ extension BasePresentationVC {
     }
 
     /// 显示 底部弹出内容 的动画 contentview:底部弹框的view
-    open func showActionSheetAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func showActionSheetAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         self.view.alpha = 1
         let contentHeight: CGFloat
         if contentView != nil {
@@ -117,7 +115,7 @@ extension BasePresentationVC {
         }
     }
     /// 隐藏 底部弹出内容 的动画 contentview:底部弹框的view
-    open func hidenActionSheetAnimation(contentView: UIView? = nil, completion: GPBoolBlock? = nil) {
+    open func hidenActionSheetAnimation(contentView: UIView? = nil, completion: GHBoolBlock? = nil) {
         let contentHeight: CGFloat
         if contentView != nil {
             contentHeight = contentView!.frame.height
@@ -137,7 +135,7 @@ extension BasePresentationVC {
     }
 }
 
-extension BasePresentationVC {
+extension GHBasePresentationVC {
     private func __showAnimation() {
         showAnimation { [weak self] result in
             if self?.completionBlock != nil {

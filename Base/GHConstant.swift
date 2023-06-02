@@ -8,16 +8,16 @@
 import Foundation
 
 // MARK: - 常用
-public typealias GPVoidBlock = () ->()
-public typealias GPBoolBlock = (Bool) ->()
-public typealias GPFloatBlock = (Float) ->()
-public typealias GPIntBlock = (Int) ->()
-public typealias GPStringBlock = (String?) ->()
-public typealias GPImageBlock = (UIImage?) ->()
-public typealias GPDataBlock = (Data?) ->()
-public typealias GPErrorBlock = (Error?) ->()
-public typealias GPArrayBlock = ([Any]?) ->()
-public typealias GPAnyBlock = (Any?) ->()
+public typealias GHVoidBlock = () ->()
+public typealias GHBoolBlock = (Bool) ->()
+public typealias GHFloatBlock = (Float) ->()
+public typealias GHIntBlock = (Int) ->()
+public typealias GHStringBlock = (String?) ->()
+public typealias GHImageBlock = (UIImage?) ->()
+public typealias GHDataBlock = (Data?) ->()
+public typealias GHErrorBlock = (Error?) ->()
+public typealias GHArrayBlock = ([Any]?) ->()
+public typealias GHAnyBlock = (Any?) ->()
 
 public let kScreenHeight = UIScreen.main.bounds.height
 public let kScreenWidth  = UIScreen.main.bounds.width
