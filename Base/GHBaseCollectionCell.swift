@@ -30,6 +30,6 @@ class GHBaseCollectionCell: UICollectionViewCell {
     
     func updateUIWithModel() {
             
-        }
+    }
 }
 
