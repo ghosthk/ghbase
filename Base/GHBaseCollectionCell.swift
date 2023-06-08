@@ -4,7 +4,7 @@ import UIKit
 open class GHBaseCollectionCell: UICollectionViewCell {
     var identifier: String = ""
     
-    open override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         config()
@@ -12,7 +12,7 @@ open class GHBaseCollectionCell: UICollectionViewCell {
         constrainitsUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

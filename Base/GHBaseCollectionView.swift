@@ -2,14 +2,14 @@ import Foundation
 import UIKit
 
 open class GHBaseCollectionView: UICollectionView {
-    open override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+    public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
         config(layout as! UICollectionViewFlowLayout)
         setup()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
