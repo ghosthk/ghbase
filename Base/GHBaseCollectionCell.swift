@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-class GHBaseCollectionCell: UICollectionViewCell {
+open class GHBaseCollectionCell: UICollectionViewCell {
     var identifier: String = ""
     
-    override init(frame: CGRect) {
+    open override init(frame: CGRect) {
         super.init(frame: frame)
         
         config()
@@ -16,19 +16,19 @@ class GHBaseCollectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func config() {
+    open func config() {
         
     }
     
-    func setup() {
+    open func setup() {
         
     }
     
-    func constrainitsUI() {
+    open func constrainitsUI() {
         
     }
     
-    func updateUIWithModel() {
+    open func updateUIWithModel() {
             
     }
 }
